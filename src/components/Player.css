@@ -1,0 +1,31 @@
+.player {
+  width: 80%;
+}
+
+.player h2 {
+  text-align: center;
+  margin: 2rem 0;
+}
+.range {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.25rem;
+}
+.range input {
+  flex-grow: 1;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-evenly;
+}
+.controls > * {
+  font-weight: bolder;
+  font-size: large;
+  margin: 2rem 0;
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+}
