@@ -1,0 +1,16 @@
+.music {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  height: 100px;
+  align-items: center;
+}
+.music img {
+  height: 60px;
+}
+.music-cover {
+  margin-left: 2rem;
+}
+.music h2 {
+  font-weight: normal;
+}
