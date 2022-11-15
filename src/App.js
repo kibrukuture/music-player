@@ -7,7 +7,7 @@ import { findIndex } from './util/helper';
 
 // context
 export const MusicContext = createContext();
-const data = chillHop();
+const data = chillHop(); // music data (api mock)
 
 function App() {
   const [currentPlaying, setCurrentPlaying] = useState(data[0]);
