@@ -9,6 +9,9 @@
   padding: 2rem 0;
 }
 
+.music-container {
+  overflow-y: auto;
+}
 @media screen and (max-width: 700px) {
   .panel {
     width: 100%;
