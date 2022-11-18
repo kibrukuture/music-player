@@ -45,6 +45,7 @@ const Player = () => {
 
   const handleNext = () => handleMusic(currentPlaying.id, 'next');
 
+  // music continues to play
   const handleOnEnded = () => handleMusic(currentPlaying.id, 'next');
 
   const handleProgress = (e) => {
