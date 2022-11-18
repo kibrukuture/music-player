@@ -1,4 +1,4 @@
-import { useState, createContext } from 'react';
+import { useState, createContext, useEffect } from 'react';
 import './App.css';
 import chillHop from './data';
 import Panel from './components/Panel';
@@ -14,8 +14,13 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [musicData, setMusicData] = useState(data);
 
-  // music
+  // set page title with "A song and artist name"
+  useEffect(() => {
+    document.title =
+      'Library - ' + currentPlaying.name + ' by ' + currentPlaying.artist;
+  });
 
+  // music
   const handleMusic = (id, flag) => {
     let index = findIndex(musicData, id);
     if (flag === 'prev') {
@@ -29,6 +34,9 @@ function App() {
       if (index < musicData.length) {
         setCurrentPlaying(musicData[index]);
         setMusicData(callback(musicData[index].id));
+      } else {
+        setCurrentPlaying(musicData[0]);
+        setMusicData(callback(musicData[0].id));
       }
     } else {
       setCurrentPlaying(musicData[index]);
