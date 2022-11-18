@@ -45,7 +45,13 @@ const Player = () => {
 
   const handleNext = () => handleMusic(currentPlaying.id, 'next');
 
-  const handleOnEnded = () => handleIsPlaying(false);
+  const handleOnEnded = () => {
+    // determine if audio ended, & go to the next track
+
+    // handleIsPlaying(false);
+    // if( currentplaying ===lastmusic  ) return to the first music
+    handleMusic(currentPlaying.id, 'next');
+  };
 
   const handleProgress = (e) => {
     const { value } = e.target;
